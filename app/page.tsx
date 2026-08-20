@@ -194,7 +194,13 @@ export default function Home() {
                   {String(index + 1).padStart(2, "0")}
                 </p>
                 <h2 className="mt-2 text-3xl font-semibold leading-tight">
-                  {project.name}
+                  {project.site ? (
+                    <a className="project-title-link" href={project.site}>
+                      {project.name}
+                    </a>
+                  ) : (
+                    project.name
+                  )}
                 </h2>
                 <p className="mt-1 font-mono text-xs uppercase tracking-[0.12em] text-[#6f665c]">
                   {project.kicker}

@@ -37,6 +37,14 @@ a {
   color: #161412;
 }
 
+.project-title-link {
+  transition: color 180ms ease;
+}
+
+.project-title-link:hover {
+  color: #f05a35;
+}
+
 .footer-button {
   color: #f05a35;
   text-decoration: underline;
