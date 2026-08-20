@@ -125,16 +125,52 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="mx-auto max-w-7xl px-5 pb-14 pt-12 sm:px-8 md:pt-20">
+      <section
+        className="mx-auto grid max-w-7xl gap-10 px-5 pb-12 pt-10 sm:px-8 md:grid-cols-[minmax(0,1fr)_minmax(360px,560px)] md:items-end md:pb-16 md:pt-16"
+        id="founder"
+      >
         <div>
-          <h1 className="mt-6 max-w-2xl text-6xl font-semibold leading-none sm:text-7xl lg:text-8xl">
+          <h1 className="max-w-2xl text-6xl font-semibold leading-none sm:text-7xl lg:text-8xl">
             Keel Labs
           </h1>
-          <p className="mt-8 text-2xl leading-9 sm:text-3xl sm:leading-10">
-            Projects:
-          </p>
+        </div>
+        <div className="grid gap-6 sm:grid-cols-[112px_1fr] sm:items-start">
+          <img
+            alt="Medha Ghatikesh"
+            className="h-28 w-28 rounded-full object-cover shadow-sm"
+            height="224"
+            src="https://github.com/medha.png?size=224"
+            width="224"
+          />
+          <div>
+            <h2 className="text-2xl font-semibold leading-tight md:text-3xl">
+              Medha Ghatikesh
+            </h2>
+            <p className="mt-3 max-w-2xl text-lg leading-7 text-[#48413a]">
+              Hey, I&apos;m Medha 👋. I&apos;m a software engineer turned product
+              manager - now a solo builder; building solutions to problems I
+              can&apos;t stop thinking about.
+            </p>
+            <p className="mt-4 text-sm leading-6 text-[#7a7065]">
+              Hand crafted with love in sunny California
+            </p>
+            <nav
+              aria-label="Founder links"
+              className="mt-5 flex flex-wrap gap-x-5 gap-y-2 font-mono text-xs uppercase tracking-[0.12em] text-[#f05a35]"
+            >
+              {links.map((link) => (
+                <a className="footer-button" href={link.href} key={link.label}>
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+          </div>
         </div>
       </section>
+
+      <div className="mx-auto max-w-7xl px-5 pb-8 sm:px-8">
+        <h2 className="text-3xl leading-tight sm:text-4xl">Projects:</h2>
+      </div>
 
       <section
         className="mx-auto grid max-w-7xl gap-x-5 gap-y-12 px-5 pb-20 sm:px-8 md:grid-cols-2"
@@ -195,43 +231,20 @@ export default function Home() {
         ))}
       </section>
 
-      <footer
-        className="border-t border-[#ded7cb] bg-[#f4f0ea] px-5 py-12 sm:px-8 md:py-16"
-        id="founder"
-      >
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 md:grid-cols-[152px_1fr] md:items-center">
-            <img
-              alt="Medha Ghatikesh"
-              className="h-32 w-32 rounded-full object-cover shadow-sm md:h-38 md:w-38"
-              height="304"
-              src="https://github.com/medha.png?size=304"
-              width="304"
-            />
-            <div>
-              <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
-                Medha Ghatikesh
-              </h2>
-              <p className="mt-3 max-w-3xl text-xl leading-8 text-[#48413a]">
-                Hey, I&apos;m Medha 👋. I&apos;m a software engineer turned product
-                manager - now a solo builder; building solutions to problems I
-                can&apos;t stop thinking about.
-              </p>
-              <p className="mt-4 text-sm leading-6 text-[#7a7065]">
-                Hand crafted with love in sunny California
-              </p>
-              <nav
-                aria-label="Founder links"
-                className="mt-6 flex flex-wrap gap-x-5 gap-y-2 font-mono text-xs uppercase tracking-[0.12em] text-[#f05a35]"
-              >
-                {links.map((link) => (
-                  <a className="footer-button" href={link.href} key={link.label}>
-                    {link.label}
-                  </a>
-                ))}
-              </nav>
-            </div>
-          </div>
+      <footer className="border-t border-[#ded7cb] bg-[#f4f0ea] px-5 py-6 sm:px-8">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 font-mono text-[11px] uppercase tracking-[0.14em] text-[#f05a35]">
+          <p>Keel Labs</p>
+          <nav aria-label="Footer links" className="flex flex-wrap gap-x-5 gap-y-2">
+            <a className="footer-button" href="#projects">
+              Projects
+            </a>
+            <a className="footer-button" href="#founder">
+              Founder
+            </a>
+            <a className="footer-button" href="https://github.com/Keel-Labs">
+              GitHub
+            </a>
+          </nav>
         </div>
       </footer>
     </main>
