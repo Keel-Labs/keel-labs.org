@@ -117,16 +117,12 @@ function ProjectArt({ type }: { type: string }) {
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f8f4ec] text-[#161412]">
-      <header className="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-5 font-mono text-[11px] uppercase tracking-[0.14em] text-[#f05a35] sm:px-8">
+      <header className="mx-auto flex w-full max-w-7xl items-center px-5 py-5 font-mono text-[11px] uppercase tracking-[0.14em] text-[#f05a35] sm:px-8">
         <a href="/">Keel Labs</a>
-        <nav aria-label="Primary" className="flex gap-4">
-          <a href="#projects">Projects</a>
-          <a href="#founder">Founder</a>
-        </nav>
       </header>
 
       <section
-        className="mx-auto grid max-w-7xl gap-10 px-5 pb-12 pt-10 sm:px-8 md:grid-cols-[minmax(0,1fr)_minmax(360px,560px)] md:items-end md:pb-16 md:pt-16"
+        className="mx-auto grid max-w-7xl gap-10 px-5 pb-12 pt-8 sm:px-8 md:grid-cols-[minmax(0,1fr)_minmax(360px,560px)] md:items-center md:pb-16 md:pt-12"
         id="founder"
       >
         <div>
