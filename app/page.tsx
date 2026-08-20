@@ -245,7 +245,7 @@ export default function Home() {
             <a className="footer-button" href="#founder">
               Founder
             </a>
-            <a className="footer-button" href="https://github.com/Keel-Labs">
+            <a className="footer-button" href="https://github.com/medha">
               GitHub
             </a>
           </nav>
