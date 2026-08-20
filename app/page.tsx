@@ -117,42 +117,42 @@ function ProjectArt({ type }: { type: string }) {
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f8f4ec] text-[#161412]">
-      <header className="mx-auto flex w-full max-w-7xl items-center px-5 py-5 font-mono text-[11px] uppercase tracking-[0.14em] text-[#f05a35] sm:px-8">
+      <header className="mx-auto flex w-full max-w-6xl items-center px-5 py-6 font-mono text-[11px] uppercase tracking-[0.14em] text-[#f05a35] sm:px-8">
         <a href="/">Keel Labs</a>
       </header>
 
       <section
-        className="mx-auto grid max-w-7xl gap-10 px-5 pb-12 pt-8 sm:px-8 md:grid-cols-[minmax(0,1fr)_minmax(360px,560px)] md:items-center md:pb-16 md:pt-12"
+        className="mx-auto max-w-6xl px-5 pb-14 pt-16 sm:px-8 md:pb-18 md:pt-20"
         id="founder"
       >
-        <div>
-          <h1 className="max-w-2xl text-6xl font-semibold leading-none sm:text-7xl lg:text-8xl">
+        <div className="grid gap-10 border-t border-[#ded7cb] pt-10 md:grid-cols-[0.9fr_1.1fr] md:items-start">
+          <h1 className="max-w-2xl text-6xl font-semibold leading-none sm:text-7xl lg:text-[112px]">
             Keel Labs
           </h1>
-        </div>
-        <div className="grid gap-6 sm:grid-cols-[112px_1fr] sm:items-start">
-          <img
-            alt="Medha Ghatikesh"
-            className="h-28 w-28 rounded-full object-cover shadow-sm"
-            height="224"
-            src="https://github.com/medha.png?size=224"
-            width="224"
-          />
-          <div>
-            <h2 className="text-2xl font-semibold leading-tight md:text-3xl">
-              Medha Ghatikesh
-            </h2>
-            <p className="mt-3 max-w-2xl text-lg leading-7 text-[#48413a]">
+          <div className="max-w-2xl">
+            <div className="flex items-center gap-4">
+              <img
+                alt="Medha Ghatikesh"
+                className="h-20 w-20 rounded-full object-cover shadow-sm"
+                height="160"
+                src="https://github.com/medha.png?size=160"
+                width="160"
+              />
+              <h2 className="text-2xl font-semibold leading-tight md:text-3xl">
+                Medha Ghatikesh
+              </h2>
+            </div>
+            <p className="mt-6 text-xl leading-8 text-[#48413a] md:text-2xl md:leading-9">
               Hey, I&apos;m Medha 👋. I&apos;m a software engineer turned product
               manager - now a solo builder; building solutions to problems I
               can&apos;t stop thinking about.
             </p>
-            <p className="mt-4 text-sm leading-6 text-[#7a7065]">
+            <p className="mt-5 text-sm leading-6 text-[#7a7065]">
               Hand crafted with love in sunny California
             </p>
             <nav
               aria-label="Founder links"
-              className="mt-5 flex flex-wrap gap-x-5 gap-y-2 font-mono text-xs uppercase tracking-[0.12em] text-[#f05a35]"
+              className="mt-6 flex flex-wrap gap-x-5 gap-y-2 font-mono text-xs uppercase tracking-[0.12em] text-[#f05a35]"
             >
               {links.map((link) => (
                 <a className="footer-button" href={link.href} key={link.label}>
@@ -164,12 +164,14 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-7xl px-5 pb-8 sm:px-8">
-        <h2 className="text-3xl leading-tight sm:text-4xl">Projects:</h2>
+      <div className="mx-auto max-w-6xl px-5 pb-6 sm:px-8">
+        <h2 className="font-mono text-xs uppercase tracking-[0.14em] text-[#f05a35]">
+          Projects:
+        </h2>
       </div>
 
       <section
-        className="mx-auto grid max-w-7xl gap-x-5 gap-y-12 px-5 pb-20 sm:px-8 md:grid-cols-2"
+        className="mx-auto grid max-w-6xl gap-x-5 gap-y-12 px-5 pb-20 sm:px-8 md:grid-cols-2"
         id="projects"
       >
         {projects.map((project, index) => (
@@ -228,7 +230,7 @@ export default function Home() {
       </section>
 
       <footer className="border-t border-[#ded7cb] bg-[#f4f0ea] px-5 py-6 sm:px-8">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 font-mono text-[11px] uppercase tracking-[0.14em] text-[#f05a35]">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 font-mono text-[11px] uppercase tracking-[0.14em] text-[#f05a35]">
           <p>Keel Labs</p>
           <nav aria-label="Footer links" className="flex flex-wrap gap-x-5 gap-y-2">
             <a className="footer-button" href="#projects">
