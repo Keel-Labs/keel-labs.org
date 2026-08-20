@@ -13,19 +13,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://keellabs.org"),
+  metadataBase: new URL("https://keel-labs.org"),
   title: "Keel Labs",
-  description:
-    "A portfolio home for Keel Labs projects, including Keel and Thala.",
+  description: "Keel Labs by Medha Ghatikesh, home of Keel Brain and Tāla.",
   openGraph: {
     title: "Keel Labs",
-    description: "A portfolio home for Keel and Thala.",
+    description: "Keel Labs by Medha Ghatikesh, home of Keel Brain and Tāla.",
     images: [{ url: "/og.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Keel Labs",
-    description: "A portfolio home for Keel and Thala.",
+    description: "Keel Labs by Medha Ghatikesh, home of Keel Brain and Tāla.",
     images: ["/og.png"],
   },
   icons: {

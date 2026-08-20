@@ -1,155 +1,239 @@
 const projects = [
   {
-    name: "Keel",
-    url: "https://keel.keellabs.org",
-    status: "First product",
-    summary:
-      "The original Keel Labs product gets its own dedicated home, focused on the product experience instead of carrying the whole studio brand.",
-    accent: "from-[#f36f45] to-[#d8c46d]",
+    name: "Keel Brain",
+    kicker: "Personal AI chief of staff",
+    descriptionLead: "An AI assistant whose memory belongs to you.",
+    description:
+      "Local-first desktop app for Mac and Windows. Plain markdown on your disk. Swap Claude, GPT, OpenRouter, or Ollama anytime — your context stays with you.",
+    site: "https://keel.keel-labs.org/",
+    github: "https://github.com/Keel-Labs/keel",
+    palette: "bg-[#f4f0ea] text-[#111111]",
+    art: "memory",
   },
   {
-    name: "Thala",
-    url: "https://thala.keellabs.org",
-    status: "In motion",
-    summary:
-      "A second product space for the work now coming into focus, separated clearly enough to grow its own audience and identity.",
-    accent: "from-[#4a9a8f] to-[#a75d8b]",
+    name: "Tāla",
+    kicker: "Old recordings, new pulse.",
+    descriptionLead:
+      "An ephemeral listening platform for discovering and interacting with historic recordings.",
+    description:
+      "Tāla helps you discover Indian archival music by pairing historic recordings with modern beats.",
+    site: "https://tala.keel-labs.org/",
+    github: "https://github.com/Keel-Labs/Tala",
+    palette: "bg-[#201d18] text-[#f7f1e4]",
+    art: "listening",
+  },
+  {
+    name: "Home Brain",
+    kicker: "Coming soon",
+    descriptionLead: null,
+    description: null,
+    site: null,
+    github: null,
+    palette: "bg-[#ede4d8] text-[#111111]",
+    art: "home",
+  },
+  {
+    name: "CBT Thought Record",
+    kicker: "Coming soon",
+    descriptionLead: null,
+    description: null,
+    site: null,
+    github: null,
+    palette: "bg-[#f7f1e4] text-[#111111]",
+    art: "thought",
   },
 ];
 
-const principles = ["Product-first", "Founder-led", "Built in public"];
+const links = [
+  { label: "GitHub", href: "https://github.com/medha" },
+  { label: "Medium", href: "https://medium.com/@medhaforcebewithyou" },
+  { label: "X", href: "https://x.com/Ghatikesh" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/medhaghatikesh" },
+  { label: "Buy me a coffee", href: "https://github.com/sponsors/medha" },
+];
+
+function ProjectArt({ type }: { type: string }) {
+  if (type === "listening") {
+    return (
+      <div className="project-art project-art-dark" aria-hidden="true">
+        <div className="record">
+          <span />
+        </div>
+        <div className="tone-arm" />
+        <div className="wave wave-one" />
+        <div className="wave wave-two" />
+      </div>
+    );
+  }
+
+  if (type === "home") {
+    return (
+      <div className="project-art project-art-home" aria-hidden="true">
+        <div className="home-roof" />
+        <div className="home-body" />
+        <div className="home-door" />
+        <div className="home-node home-node-one" />
+        <div className="home-node home-node-two" />
+        <div className="home-node home-node-three" />
+        <div className="home-path home-path-one" />
+        <div className="home-path home-path-two" />
+      </div>
+    );
+  }
+
+  if (type === "thought") {
+    return (
+      <div className="project-art project-art-thought" aria-hidden="true">
+        <div className="journal">
+          <div className="journal-spine" />
+          <div className="journal-line journal-line-one" />
+          <div className="journal-line journal-line-two" />
+          <div className="journal-line journal-line-three" />
+          <div className="journal-bookmark" />
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="project-art" aria-hidden="true">
+      <div className="keel-logo-frame">
+        <img alt="" src="/keel-logo.png" />
+      </div>
+      <div className="keel-memory-card keel-memory-card-left">
+        <span># memory</span>
+        <span>daily.md</span>
+      </div>
+      <div className="keel-memory-card keel-memory-card-right">
+        <span>Claude</span>
+        <span>GPT</span>
+        <span>Ollama</span>
+      </div>
+      <div className="keel-disk" />
+    </div>
+  );
+}
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f7f4ee] text-[#171717]">
-      <section className="relative flex min-h-screen flex-col">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,rgba(243,111,69,0.24),transparent_28%),radial-gradient(circle_at_82%_12%,rgba(74,154,143,0.24),transparent_26%),linear-gradient(135deg,rgba(23,23,23,0.05),transparent_45%)]" />
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#f7f4ee] to-transparent" />
+    <main className="min-h-screen bg-[#f8f4ec] text-[#161412]">
+      <header className="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-5 font-mono text-[11px] uppercase tracking-[0.14em] text-[#f05a35] sm:px-8">
+        <a href="/">Keel Labs</a>
+        <nav aria-label="Primary" className="flex gap-4">
+          <a href="#projects">Projects</a>
+          <a href="#founder">Founder</a>
+        </nav>
+      </header>
 
-        <header className="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-5 sm:px-8">
-          <a className="font-mono text-sm uppercase tracking-[0.18em]" href="/">
+      <section className="mx-auto max-w-7xl px-5 pb-14 pt-12 sm:px-8 md:pt-20">
+        <div>
+          <h1 className="mt-6 max-w-2xl text-6xl font-semibold leading-none sm:text-7xl lg:text-8xl">
             Keel Labs
-          </a>
-          <nav aria-label="Project links" className="flex items-center gap-2">
-            {projects.map((project) => (
-              <a
-                className="rounded-full border border-[#171717]/15 bg-white/60 px-3 py-2 text-sm transition hover:border-[#171717]/45 hover:bg-white"
-                href={project.url}
-                key={project.name}
-              >
-                {project.name}
-              </a>
-            ))}
-          </nav>
-        </header>
-
-        <div className="relative z-10 mx-auto grid w-full max-w-7xl flex-1 items-center gap-10 px-5 pb-16 pt-8 sm:px-8 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="max-w-3xl">
-            <p className="mb-5 w-fit rounded-full border border-[#171717]/15 bg-white/70 px-3 py-2 font-mono text-xs uppercase tracking-[0.16em]">
-              Portfolio studio
-            </p>
-            <h1 className="text-6xl font-semibold leading-[0.92] sm:text-7xl lg:text-8xl">
-              Keel Labs
-            </h1>
-            <p className="mt-7 max-w-2xl text-xl leading-8 text-[#343434] sm:text-2xl sm:leading-9">
-              A home base for the products I am bringing into the world right
-              now, with each product getting its own sharper, cleaner place to
-              live.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              {principles.map((principle) => (
-                <span
-                  className="border border-[#171717]/15 bg-[#171717] px-4 py-2 text-sm text-white"
-                  key={principle}
-                >
-                  {principle}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div className="relative min-h-[420px] lg:min-h-[560px]" aria-hidden="true">
-            <div className="absolute left-4 top-2 h-56 w-56 rounded-full bg-[#f36f45]/85 blur-2xl" />
-            <div className="absolute bottom-10 right-2 h-64 w-64 rounded-full bg-[#4a9a8f]/80 blur-2xl" />
-            <div className="absolute left-[18%] top-[16%] h-[72%] w-[72%] rotate-[-8deg] border border-[#171717]/20 bg-white/40 shadow-2xl shadow-[#171717]/10 backdrop-blur-md" />
-            <div className="absolute left-[9%] top-[8%] h-[72%] w-[72%] rotate-[5deg] border border-[#171717]/20 bg-[#171717] p-5 text-white shadow-2xl">
-              <div className="flex items-center justify-between border-b border-white/20 pb-4 font-mono text-xs uppercase tracking-[0.16em] text-white/70">
-                <span>keellabs.org</span>
-                <span>home</span>
-              </div>
-              <div className="grid h-full content-between gap-6 pb-8 pt-10">
-                <div>
-                  <p className="text-sm uppercase tracking-[0.16em] text-[#d8c46d]">
-                    Parent brand
-                  </p>
-                  <p className="mt-4 max-w-sm text-4xl font-semibold leading-tight">
-                    One portfolio, multiple product homes.
-                  </p>
-                </div>
-                <div className="grid gap-3">
-                  <div className="flex items-center justify-between border border-white/15 bg-white/10 p-4">
-                    <span>keel</span>
-                    <span className="font-mono text-sm text-white/60">
-                      keel.keellabs.org
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between border border-white/15 bg-white/10 p-4">
-                    <span>thala</span>
-                    <span className="font-mono text-sm text-white/60">
-                      thala.keellabs.org
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          </h1>
+          <p className="mt-8 text-2xl leading-9 sm:text-3xl sm:leading-10">
+            Projects:
+          </p>
         </div>
       </section>
 
-      <section className="bg-[#171717] px-5 py-16 text-white sm:px-8">
-        <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.75fr_1.25fr]">
-          <div>
-            <p className="font-mono text-xs uppercase tracking-[0.18em] text-white/55">
-              Current lineup
-            </p>
-            <h2 className="mt-4 max-w-sm text-4xl font-semibold leading-tight">
-              Products with room to become themselves.
-            </h2>
-          </div>
-          <div className="grid gap-4 md:grid-cols-2">
-            {projects.map((project) => (
+      <section
+        className="mx-auto grid max-w-7xl gap-x-5 gap-y-12 px-5 pb-20 sm:px-8 md:grid-cols-2"
+        id="projects"
+      >
+        {projects.map((project, index) => (
+          <article className="group" key={project.name}>
+            {project.site ? (
               <a
-                className="group border border-white/12 bg-white/[0.06] p-5 transition hover:-translate-y-1 hover:bg-white/[0.1]"
-                href={project.url}
-                key={project.name}
+                className={`block border border-[#f05a35]/60 ${project.palette}`}
+                href={project.site}
               >
-                <div
-                  className={`mb-12 h-2 w-24 bg-gradient-to-r ${project.accent}`}
-                />
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <p className="font-mono text-xs uppercase tracking-[0.18em] text-white/50">
-                      {project.status}
-                    </p>
-                    <h3 className="mt-3 text-3xl font-semibold">
-                      {project.name}
-                    </h3>
-                  </div>
-                  <span className="text-2xl transition group-hover:translate-x-1">
-                    -&gt;
-                  </span>
-                </div>
-                <p className="mt-5 text-base leading-7 text-white/70">
-                  {project.summary}
-                </p>
-                <p className="mt-8 font-mono text-sm text-white/55">
-                  {project.url.replace("https://", "")}
-                </p>
+                <ProjectArt type={project.art} />
               </a>
-            ))}
+            ) : (
+              <div className={`block border border-[#f05a35]/60 ${project.palette}`}>
+              <ProjectArt type={project.art} />
+              </div>
+            )}
+            <div className="mt-3 flex items-start justify-between gap-5 border-t border-[#f05a35]/50 pt-3">
+              <div>
+                <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-[#f05a35]">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+                <h2 className="mt-2 text-3xl font-semibold leading-tight">
+                  {project.name}
+                </h2>
+                <p className="mt-1 font-mono text-xs uppercase tracking-[0.12em] text-[#6f665c]">
+                  {project.kicker}
+                </p>
+                {project.description || project.descriptionLead ? (
+                  <p className="mt-4 max-w-xl text-base leading-7 text-[#342f2a]">
+                    {project.descriptionLead ? (
+                      <>
+                        <strong>{project.descriptionLead}</strong>{" "}
+                      </>
+                    ) : null}
+                    {project.description}
+                  </p>
+                ) : null}
+              </div>
+              {project.site || project.github ? (
+                <div className="grid shrink-0 gap-2 text-right font-mono text-xs uppercase tracking-[0.12em]">
+                  {project.site ? (
+                    <a className="project-link" href={project.site}>
+                      Site
+                    </a>
+                  ) : null}
+                  {project.github ? (
+                    <a className="project-link" href={project.github}>
+                      GitHub
+                    </a>
+                  ) : null}
+                </div>
+              ) : null}
+            </div>
+          </article>
+        ))}
+      </section>
+
+      <footer
+        className="border-t border-[#ded7cb] bg-[#f4f0ea] px-5 py-12 sm:px-8 md:py-16"
+        id="founder"
+      >
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-8 md:grid-cols-[152px_1fr] md:items-center">
+            <img
+              alt="Medha Ghatikesh"
+              className="h-32 w-32 rounded-full object-cover shadow-sm md:h-38 md:w-38"
+              height="304"
+              src="https://github.com/medha.png?size=304"
+              width="304"
+            />
+            <div>
+              <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+                Medha Ghatikesh
+              </h2>
+              <p className="mt-3 max-w-3xl text-xl leading-8 text-[#48413a]">
+                Hey, I&apos;m Medha 👋. I&apos;m a software engineer turned product
+                manager - now a solo builder; building solutions to problems I
+                can&apos;t stop thinking about.
+              </p>
+              <p className="mt-4 text-sm leading-6 text-[#7a7065]">
+                Hand crafted with love in sunny California
+              </p>
+              <nav
+                aria-label="Founder links"
+                className="mt-6 flex flex-wrap gap-x-5 gap-y-2 font-mono text-xs uppercase tracking-[0.12em] text-[#f05a35]"
+              >
+                {links.map((link) => (
+                  <a className="footer-button" href={link.href} key={link.label}>
+                    {link.label}
+                  </a>
+                ))}
+              </nav>
+            </div>
           </div>
         </div>
-      </section>
+      </footer>
     </main>
   );
 }

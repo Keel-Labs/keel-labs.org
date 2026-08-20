@@ -29,9 +29,16 @@ test("server-renders the Keel Labs portfolio homepage", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>Keel Labs<\/title>/i);
-  assert.match(html, /Portfolio studio/);
-  assert.match(html, /keel\.keellabs\.org/);
-  assert.match(html, /thala\.keellabs\.org/);
-  assert.match(html, /Current lineup/);
+  assert.match(html, /Keel Brain/);
+  assert.match(html, /Tāla/);
+  assert.match(html, /keel\.keel-labs\.org/);
+  assert.match(html, /tala\.keel-labs\.org/);
+  assert.match(html, /github\.com\/Keel-Labs\/keel/);
+  assert.match(html, /github\.com\/Keel-Labs\/Tala/);
+  assert.match(html, /Medha Ghatikesh/);
+  assert.doesNotMatch(
+    html,
+    /moving from|stubborn projects|your dream here|independent software projects/i,
+  );
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/);
 });
