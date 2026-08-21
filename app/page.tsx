@@ -23,7 +23,7 @@ const projects = [
     art: "listening",
   },
   {
-    name: "Home Brain",
+    name: "Nook",
     kicker: "Coming soon",
     descriptionLead: null,
     description: null,
@@ -69,14 +69,13 @@ function ProjectArt({ type }: { type: string }) {
   if (type === "home") {
     return (
       <div className="project-art project-art-home" aria-hidden="true">
-        <div className="home-roof" />
-        <div className="home-body" />
-        <div className="home-door" />
-        <div className="home-node home-node-one" />
-        <div className="home-node home-node-two" />
-        <div className="home-node home-node-three" />
-        <div className="home-path home-path-one" />
-        <div className="home-path home-path-two" />
+        <div className="nook-window" />
+        <div className="nook-shelf" />
+        <div className="nook-book nook-book-one" />
+        <div className="nook-book nook-book-two" />
+        <div className="nook-book nook-book-three" />
+        <div className="nook-lamp" />
+        <div className="nook-light" />
       </div>
     );
   }

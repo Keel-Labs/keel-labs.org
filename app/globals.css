@@ -210,86 +210,94 @@ a {
   width: 126px;
 }
 
-.home-roof {
+.nook-window {
   position: absolute;
   left: 50%;
-  top: 56px;
-  height: 142px;
-  width: 142px;
-  border-left: 3px solid #161412;
-  border-top: 3px solid #161412;
-  transform: translateX(-50%) rotate(45deg);
-}
-
-.home-body {
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
+  top: 52px;
   height: 126px;
-  width: 246px;
+  width: 178px;
   border: 3px solid #161412;
-  background: rgba(248, 244, 236, 0.68);
+  background:
+    linear-gradient(90deg, transparent calc(50% - 1.5px), #161412 calc(50% - 1.5px) calc(50% + 1.5px), transparent calc(50% + 1.5px)),
+    linear-gradient(transparent calc(50% - 1.5px), #161412 calc(50% - 1.5px) calc(50% + 1.5px), transparent calc(50% + 1.5px)),
+    rgba(248, 244, 236, 0.72);
+  box-shadow: 12px 12px 0 rgba(213, 180, 90, 0.34);
   transform: translateX(-50%);
 }
 
-.home-door {
+.nook-shelf {
   position: absolute;
-  bottom: 50px;
+  bottom: 68px;
   left: 50%;
+  height: 8px;
+  width: 286px;
+  background: #161412;
+  transform: translateX(-50%);
+}
+
+.nook-book {
+  position: absolute;
+  bottom: 76px;
+  width: 28px;
+  border: 3px solid #f05a35;
+  background: rgba(248, 244, 236, 0.9);
+}
+
+.nook-book-one {
+  left: calc(50% - 110px);
+  height: 68px;
+}
+
+.nook-book-two {
+  left: calc(50% - 76px);
+  height: 92px;
+  background: #f05a35;
+}
+
+.nook-book-three {
+  left: calc(50% - 42px);
+  height: 78px;
+}
+
+.nook-lamp {
+  position: absolute;
+  right: calc(50% - 124px);
+  bottom: 76px;
+  height: 102px;
+  width: 74px;
+  border-bottom: 3px solid #161412;
+}
+
+.nook-lamp::before {
+  position: absolute;
+  left: 34px;
+  bottom: 0;
   height: 58px;
-  width: 40px;
+  width: 3px;
+  background: #161412;
+  content: "";
+}
+
+.nook-lamp::after {
+  position: absolute;
+  left: 12px;
+  top: 0;
+  height: 44px;
+  width: 50px;
   border: 3px solid #161412;
   border-bottom: 0;
-  background: rgba(248, 244, 236, 0.86);
-  transform: translateX(-50%);
+  background: #d5b45a;
+  clip-path: polygon(16% 0, 84% 0, 100% 100%, 0 100%);
+  content: "";
 }
 
-.home-node {
+.nook-light {
   position: absolute;
-  height: 22px;
-  width: 22px;
-  border: 3px solid #f05a35;
-  border-radius: 999px;
-  background: #f8f4ec;
-  z-index: 2;
-}
-
-.home-node-one {
-  left: 35%;
-  bottom: 137px;
-}
-
-.home-node-two {
-  right: 35%;
-  bottom: 137px;
-}
-
-.home-node-three {
-  left: 50%;
-  bottom: 88px;
-  transform: translateX(-50%);
-}
-
-.home-path {
-  position: absolute;
-  height: 3px;
-  width: 74px;
-  background: #f05a35;
-  transform-origin: left center;
-  z-index: 1;
-}
-
-.home-path-one {
-  left: calc(35% + 18px);
-  bottom: 143px;
-  transform: rotate(34deg);
-}
-
-.home-path-two {
-  right: calc(35% + 18px);
-  bottom: 143px;
-  transform: rotate(146deg);
-  transform-origin: right center;
+  right: calc(50% - 120px);
+  top: 66px;
+  height: 118px;
+  width: 120px;
+  background: radial-gradient(circle, rgba(213, 180, 90, 0.34), transparent 68%);
 }
 
 .journal {
@@ -370,13 +378,29 @@ a {
     padding: 10px;
   }
 
-  .home-roof {
-    height: 112px;
-    width: 112px;
+  .nook-window {
+    height: 98px;
+    width: 138px;
   }
 
-  .home-body {
-    width: 184px;
+  .nook-shelf {
+    width: 210px;
+  }
+
+  .nook-book-one {
+    left: calc(50% - 88px);
+  }
+
+  .nook-book-two {
+    left: calc(50% - 54px);
+  }
+
+  .nook-book-three {
+    left: calc(50% - 20px);
+  }
+
+  .nook-lamp {
+    right: calc(50% - 102px);
   }
 
   .journal {
