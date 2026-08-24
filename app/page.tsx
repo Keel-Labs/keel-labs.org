@@ -24,9 +24,10 @@ const projects = [
   },
   {
     name: "Nook",
-    kicker: "Live",
+    kicker: "Shared home systems",
     descriptionLead: null,
-    description: null,
+    description:
+      "Nook helps families track systems, maintenance, warranties, and documents in one shared place.",
     site: "https://nook.keel-labs.org/",
     github: null,
     palette: "bg-[#ede4d8] text-[#111111]",
