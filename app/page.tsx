@@ -220,7 +220,7 @@ export default function Home() {
                 <div className="grid shrink-0 gap-2 text-right font-mono text-xs uppercase tracking-[0.12em]">
                   {project.site ? (
                     <a className="project-link" href={project.site}>
-                      Site
+                      {project.name === "Nook" ? "Visit Nook" : "Site"}
                     </a>
                   ) : null}
                   {project.github ? (
