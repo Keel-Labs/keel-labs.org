@@ -70,13 +70,9 @@ function ProjectArt({ type }: { type: string }) {
   if (type === "home") {
     return (
       <div className="project-art project-art-home" aria-hidden="true">
-        <div className="nook-window" />
-        <div className="nook-shelf" />
-        <div className="nook-book nook-book-one" />
-        <div className="nook-book nook-book-two" />
-        <div className="nook-book nook-book-three" />
-        <div className="nook-lamp" />
-        <div className="nook-light" />
+        <div className="nook-lockup-card">
+          <img alt="" src="/nook-logo-lockup-web.png" />
+        </div>
       </div>
     );
   }
